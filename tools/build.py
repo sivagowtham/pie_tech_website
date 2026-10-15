@@ -202,6 +202,7 @@ def shell(title, body, home=False, desc=''):
 {FOOTER}
 <button class="to-top" aria-label="Back to top">↑</button>
 <script src="assets/js/site.js" defer></script>
+<script src="assets/js/chat.js" defer></script>
 </body></html>'''
 
 FOOTER = '''<footer class="site-footer"><div class="wrap foot-grid">
