@@ -102,10 +102,13 @@ ${context}`;
     const sources = found.filter(c => !seen.has(c.u) && seen.add(c.u)).slice(0, 2).map(c => ({ title: c.t, url: c.u }));
     return json({ reply, sources });
   } catch (e) {
+    console.error('chat error', e && (e.stack || e.message || e));
     const msg = lang === 'Tamil'
       ? `மன்னிக்கவும், இப்போது பதிலளிக்க இயலவில்லை. சேர்க்கை அலுவலகத்தை அழைக்கவும்: ${PHONES}.`
       : `Sorry, I can't answer right now. Please call the admissions office: ${PHONES}, or email dean@pietech.edu.in.`;
-    return json({ reply: msg, sources: [], error: true }, 200);
+    return json({ reply: msg, sources: [], error: true, detail: String((e && e.message) || e).slice(0, 300) }, 200);
   }
 }
-export const onRequest = ({ request }) => request.method === 'POST' ? undefined : json({ error: 'POST only' }, 405);
+// Health check: GET /api/chat shows whether the AI binding is attached (no secrets).
+export const onRequestGet = ({ env }) => json({ ok: true, ai_binding: typeof env.AI?.run === 'function', model: MODEL, chunks: kb.length });
+export const onRequest = ({ request }) => request.method === 'POST' || request.method === 'GET' ? undefined : json({ error: 'POST only' }, 405);
