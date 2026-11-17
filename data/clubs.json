@@ -1,0 +1,258 @@
+{
+ "categories": [
+  "Service & Social Responsibility",
+  "Arts & Culture",
+  "Science & Technology",
+  "Enterprise & Leadership",
+  "Sports & Fitness"
+ ],
+ "clubs": [
+  {
+   "id": "ncc",
+   "name": "National Cadet Corps (NCC)",
+   "category": "Service & Social Responsibility",
+   "summary": "Discipline, leadership and service under the motto \"Unity and Discipline\".",
+   "description": "",
+   "activities": [],
+   "page": "ncc.html"
+  },
+  {
+   "id": "nss",
+   "name": "National Service Scheme (NSS)",
+   "category": "Service & Social Responsibility",
+   "summary": "Community service and social responsibility through the NSS.",
+   "description": "National Service Scheme volunteers take part in community service programmes.",
+   "activities": [],
+   "page": "nss.html"
+  },
+  {
+   "id": "astronomy",
+   "name": "Astronomy Club",
+   "category": "Science & Technology",
+   "summary": "Exploring the night sky, space science and the universe.",
+   "description": "The Astronomy Club brings together students curious about the sky above Pollachi. Members learn to read star charts, identify constellations and planets, and follow space missions and celestial events.",
+   "activities": [
+    "Night sky observation sessions",
+    "Talks on space science and space missions",
+    "Watching eclipses, meteor showers and planetary events",
+    "Quizzes and model-making contests"
+   ]
+  },
+  {
+   "id": "martial-arts",
+   "name": "Martial Arts Club",
+   "category": "Sports & Fitness",
+   "summary": "Self-defence, discipline and fitness through martial arts.",
+   "description": "The Martial Arts Club trains students in self-defence and traditional martial arts, building fitness, confidence, focus and discipline.",
+   "activities": [
+    "Regular training sessions",
+    "Self-defence workshops for students",
+    "Demonstrations during college events",
+    "Participation in inter-collegiate competitions"
+   ]
+  },
+  {
+   "id": "fine-arts",
+   "name": "Fine Arts Club",
+   "category": "Arts & Culture",
+   "summary": "A space for drawing, painting, craft and creative expression.",
+   "description": "The Fine Arts Club encourages students to express themselves through drawing, painting, sketching, rangoli, craft and design.",
+   "activities": [
+    "Drawing, painting and sketching workshops",
+    "Rangoli and poster-making contests",
+    "Campus decoration for festivals and events",
+    "Exhibitions of student work"
+   ]
+  },
+  {
+   "id": "rotaract",
+   "name": "Rotaract Club",
+   "category": "Service & Social Responsibility",
+   "summary": "Young leaders in service, fellowship and professional growth.",
+   "description": "The Rotaract Club connects students with the Rotary movement to develop leadership, take part in community service projects and build professional skills.",
+   "activities": [
+    "Community service and awareness projects",
+    "Blood donation and health camps",
+    "Leadership and personality development sessions",
+    "Joint programmes with Rotary clubs"
+   ]
+  },
+  {
+   "id": "photography",
+   "name": "Photography Club",
+   "category": "Arts & Culture",
+   "summary": "Learn to see, frame and tell stories with a camera.",
+   "description": "The Photography Club is for students who enjoy capturing people, places and moments. Members learn composition, lighting and editing, and help document life on campus.",
+   "activities": [
+    "Photography walks and workshops",
+    "Photo and short-film contests",
+    "Coverage of college events",
+    "Photo exhibitions"
+   ]
+  },
+  {
+   "id": "anti-drug",
+   "name": "Anti-Drug Club",
+   "category": "Service & Social Responsibility",
+   "summary": "Awareness and peer support for a drug-free campus and community.",
+   "description": "The Anti-Drug Club works to keep the campus and community free from drugs and substance abuse through awareness, peer education and positive alternatives such as sports and the arts.",
+   "activities": [
+    "Awareness campaigns, rallies and street plays",
+    "Talks by doctors, counsellors and police officers",
+    "Poster and slogan competitions",
+    "Observance of the International Day Against Drug Abuse"
+   ]
+  },
+  {
+   "id": "book-readers",
+   "name": "Book Readers Club",
+   "category": "Arts & Culture",
+   "summary": "For students who love books, reading and discussion.",
+   "description": "The Book Readers Club promotes the reading habit among students. Members read, review and discuss books of all kinds, supported by the college library.",
+   "activities": [
+    "Book discussions and review sessions",
+    "Reading challenges and book exchange",
+    "Author talks and library visits",
+    "Writing and book-review contests"
+   ]
+  },
+  {
+   "id": "animal-welfare",
+   "name": "Animal Welfare Club",
+   "category": "Service & Social Responsibility",
+   "summary": "Compassion and care for animals on campus and beyond.",
+   "description": "The Animal Welfare Club encourages kindness towards animals and responsible care for the stray animals and birds around the campus.",
+   "activities": [
+    "Feeding points and water bowls for birds and animals",
+    "Awareness drives on animal care and adoption",
+    "Visits to animal shelters",
+    "Support for rescue and vaccination drives"
+   ]
+  },
+  {
+   "id": "cultural",
+   "name": "Cultural Club",
+   "category": "Arts & Culture",
+   "summary": "Music, dance, drama and the cultural life of the campus.",
+   "description": "The Cultural Club organises and promotes music, dance, drama and other performing arts, and is behind much of the colour of college cultural events and celebrations.",
+   "activities": [
+    "Music, dance and drama practice",
+    "Cultural fest and festival celebrations",
+    "Intra- and inter-college competitions",
+    "Talent shows and annual day programmes"
+   ]
+  },
+  {
+   "id": "road-safety",
+   "name": "Road Safety Club",
+   "category": "Service & Social Responsibility",
+   "summary": "Promoting safe roads, helmets and responsible driving.",
+   "description": "The Road Safety Club promotes road safety awareness among students, staff and the neighbouring community, with a focus on helmets, seat belts, traffic rules and responsible driving.",
+   "activities": [
+    "Awareness rallies and campaigns",
+    "Helmet and traffic-rule awareness drives",
+    "Workshops with traffic police and first-aid training",
+    "Road Safety Week observances"
+   ]
+  },
+  {
+   "id": "entrepreneurship",
+   "name": "Entrepreneurship Club",
+   "category": "Enterprise & Leadership",
+   "summary": "Ideas, start-ups and an enterprising mindset.",
+   "description": "The Entrepreneurship Club nurtures an enterprising mindset. Students work on business ideas, meet entrepreneurs and learn how to take an idea towards a start-up, working closely with the Institution's Innovation Council (IIC).",
+   "activities": [
+    "Idea and business-plan contests",
+    "Talks by entrepreneurs and industry experts",
+    "Start-up and innovation workshops",
+    "Product and prototype showcases"
+   ],
+   "page": "iic.html"
+  },
+  {
+   "id": "nature",
+   "name": "Natural Club",
+   "category": "Science & Technology",
+   "summary": "Protecting the environment and the green campus.",
+   "description": "The Natural Club encourages students to protect and enjoy the environment.",
+   "activities": [
+    "Tree planting and campus greening",
+    "Environmental awareness programmes",
+    "Clean-up drives"
+   ],
+   "page": "nature-club.html"
+  },
+  {
+   "id": "tamil-mandram",
+   "name": "Tamil Mandram",
+   "category": "Arts & Culture",
+   "summary": "Tamil language, literature and culture.",
+   "description": "Tamil Mandram celebrates Tamil language, literature and culture.",
+   "activities": [
+    "Literary and oratory competitions",
+    "Cultural programmes"
+   ],
+   "page": "tamilmandram.html"
+  },
+  {
+   "id": "coding",
+   "name": "Coding Club",
+   "category": "Science & Technology",
+   "summary": "Programming, problem solving and technology.",
+   "description": "The Coding Club helps students build programming and problem-solving skills.",
+   "activities": [
+    "Coding contests and workshops",
+    "Hackathons"
+   ],
+   "page": "coding.html"
+  },
+  {
+   "id": "english",
+   "name": "English Literary Club",
+   "category": "Arts & Culture",
+   "summary": "English language, literature and communication.",
+   "description": "The English Literary Club develops communication skills and a love of English language and literature.",
+   "activities": [
+    "Debates, elocution and quizzes",
+    "Literary events"
+   ],
+   "page": "english-club.html"
+  },
+  {
+   "id": "science",
+   "name": "Science Club",
+   "category": "Science & Technology",
+   "summary": "Curiosity, experiments and scientific temper.",
+   "description": "The Science Club encourages scientific curiosity and hands-on learning.",
+   "activities": [
+    "Science exhibitions",
+    "Talks and experiments"
+   ],
+   "page": "science-club.html"
+  },
+  {
+   "id": "yrc",
+   "name": "Youth Red Cross (YRC)",
+   "category": "Service & Social Responsibility",
+   "summary": "Humanitarian service, health and first aid.",
+   "description": "The Youth Red Cross wing promotes humanitarian service, health and first-aid awareness.",
+   "activities": [
+    "Blood donation camps",
+    "First-aid training"
+   ],
+   "page": "yrc.html"
+  },
+  {
+   "id": "sports",
+   "name": "Sports Club",
+   "category": "Sports & Fitness",
+   "summary": "Cricket, athletics, indoor games and the gym.",
+   "description": "The Sports Club provides facilities and opportunities for outdoor and indoor sports.",
+   "activities": [
+    "Tournaments and sports day",
+    "Gym and fitness"
+   ],
+   "page": "sports-club.html"
+  }
+ ]
+}

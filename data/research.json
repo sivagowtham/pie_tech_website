@@ -1,0 +1,99 @@
+{
+ "members": [
+  {
+   "name": "Dr. A. Dhanamurugan",
+   "role": "Principal; Chairman – Research",
+   "qualification": "B.E., M.Tech., Ph.D. (Mechanical Engineering)",
+   "area": "Alternate fuels; welding engineering, corrosion engineering and optimization techniques",
+   "bio": "Life Member of ISTE. Has published 4 national and 3 international research papers and has attended national and international conferences."
+  },
+  {
+   "name": "Dr. G. Arulmozhi",
+   "role": "Chairperson, Governing Council",
+   "qualification": "M.Sc., M.Phil., Ph.D. (Statistics)",
+   "area": "Applied Statistics, Optimization Techniques and Stochastic models",
+   "bio": "UG in Mathematics from Madras University; M.Sc., M.Phil. and Ph.D. in Statistics from PSG Institutions. More than 35 years of teaching experience in reputed institutions such as PSG College of Technology. Has guided nearly 100 postgraduate and two doctoral candidates and published more than 50 research articles in national and international journals and conferences. Life Member of ISTE and ISPS."
+  },
+  {
+   "name": "Dr. P. Muthusamy",
+   "role": "Dean – Mechanical Science; Coordinator – Research",
+   "qualification": "M.E., Ph.D."
+  },
+  {
+   "name": "Dr. E. Kamalavathi",
+   "role": "Dean – Electronics and Communication Engineering",
+   "qualification": "M.E., Ph.D."
+  },
+  {
+   "name": "Ms. N. Priyadharsini",
+   "role": "Assistant Professor of English",
+   "qualification": "M.A., M.Phil., Ph.D.",
+   "area": "Indian and Indian-migrant short stories; cultural issues of the Indian diaspora",
+   "bio": "Her research studies a collection of short stories that addresses sensitive dilemmas in the lives of Indians and Indian migrants – marital difficulties, miscarriages and the disconnection between first- and second-generation immigrants. Her thesis also explores the cultural differences between American-born second-generation Indians and their parents, who migrated to the U.S. in the 1970s–80s."
+  },
+  {
+   "name": "Ms. R. Subasini",
+   "role": "Assistant Professor of Mathematics",
+   "qualification": "M.Sc., M.Phil., Ph.D.",
+   "area": "Semi generalized semipreclosed sets",
+   "bio": "Her research builds on generalized closed sets (introduced by Levine in 1970) and generalized semi-preclosed sets (Dontchev, 1995). She introduces semigeneralized semipreclosed sets and studies some of their properties."
+  },
+  {
+   "name": "Mr. N. Vijayakumar",
+   "role": "Head of Department, Computer Science and Engineering",
+   "qualification": "M.E. (Ph.D.)",
+   "area": "Artificial Intelligence",
+   "bio": "Doing research on facial-remarks AI: developing and assessing the effectiveness of a CNN-based disease prediction system that uses facial remarks."
+  }
+ ],
+ "areas": [
+  "Alternate fuels",
+  "Welding and corrosion engineering",
+  "Optimization techniques",
+  "Applied statistics and stochastic models",
+  "Topology – generalized closed sets",
+  "Artificial intelligence and disease prediction",
+  "English literature and diaspora studies"
+ ],
+ "sections": [
+  {
+   "title": "Publications",
+   "columns": [
+    "Title",
+    "Author(s)",
+    "Journal / Conference",
+    "Year"
+   ],
+   "items": []
+  },
+  {
+   "title": "Patents and IPR",
+   "columns": [
+    "Title",
+    "Inventor(s)",
+    "Status",
+    "Year"
+   ],
+   "items": []
+  },
+  {
+   "title": "Funded Projects",
+   "columns": [
+    "Project",
+    "Investigator",
+    "Funding agency",
+    "Year"
+   ],
+   "items": []
+  },
+  {
+   "title": "Research Seminars and Guest Lectures",
+   "columns": [
+    "Topic",
+    "Speaker",
+    "Date"
+   ],
+   "items": []
+  }
+ ]
+}

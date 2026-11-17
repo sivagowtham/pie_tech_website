@@ -36,6 +36,22 @@ for f in sorted(glob.glob(f'{ROOT}/*.html')):
             flush()
         buf.append(l); size += len(l) + 1
     flush()
+
+# Data-driven pages (clubs, research): index their JSON so the chat assistant can answer from it.
+def add_json(name, title, url, text):
+    for i in range(0, len(text), 750):
+        chunks.append({'t': title, 'u': url, 'x': text[i:i+750]})
+try:
+    d = json.load(open(f'{ROOT}/data/clubs.json', encoding='utf-8'))
+    for c in d['clubs']:
+        t = c['name'] + ' (' + c['category'] + '): ' + c['summary'] + ' ' + c.get('description', '') + ' Activities: ' + '; '.join(c.get('activities', []))
+        add_json('clubs', 'Clubs: ' + c['name'], c.get('page') or 'clubs.html', t)
+    d = json.load(open(f'{ROOT}/data/research.json', encoding='utf-8'))
+    for m in d['members']:
+        add_json('research', 'Research member: ' + m['name'], 'research-members.html', ' '.join(str(m.get(k, '')) for k in ('name', 'role', 'qualification', 'area', 'bio')))
+    add_json('research', 'Research areas', 'research.html', 'Research areas: ' + '; '.join(d['areas']))
+except FileNotFoundError:
+    pass
 os.makedirs(f'{ROOT}/functions', exist_ok=True)
 json.dump(chunks, open(f'{ROOT}/functions/kb.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
 print(len(chunks), 'chunks', os.path.getsize(f'{ROOT}/functions/kb.json') // 1024, 'KB')
