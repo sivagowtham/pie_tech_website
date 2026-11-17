@@ -5,7 +5,10 @@
 var SRC={clubs:'data/clubs.json',gallery:'data/gallery.json',research:'data/research.json',news:'data/news.json',search:'data/search-index.json'};
 var $=function(s,c){return(c||document).querySelector(s)},$$=function(s,c){return[].slice.call((c||document).querySelectorAll(s))};
 function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
-function get(k){return fetch(SRC[k],{cache:'no-cache'}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json()})}
+var API={clubs:'api/data/clubs',gallery:'api/data/gallery',research:'api/data/research',news:'api/data/news'};
+function fetchJson(u){return fetch(u,{cache:'no-cache'}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json()})}
+/* edited copy from the admin first; the file in /data if the API is unavailable */
+function get(k){return API[k]?fetchJson(API[k]).catch(function(){return fetchJson(SRC[k])}):fetchJson(SRC[k])}
 function initials(n){return n.replace(/\(.*?\)/g,'').split(/\s+/).filter(Boolean).slice(0,2).map(function(w){return w[0]}).join('').toUpperCase()}
 function href(c){return c.page||('club.html?id='+encodeURIComponent(c.id))}
 
