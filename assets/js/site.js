@@ -29,3 +29,9 @@ if(gi.length){var lb=document.createElement('div');lb.className='lb';lb.innerHTM
  gi.forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();$('img',lb).src=a.href;lb.classList.add('open')})});
  lb.addEventListener('click',function(){lb.classList.remove('open')});document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('open')})}
 })();
+
+/* admission enquiry tab and search link on every page */
+(function(){
+ if(!document.querySelector('.enquiry-tab')){var a=document.createElement('a');a.className='enquiry-tab';a.href='https://forms.gle/SbP8aP95euqRNZfr5';a.target='_blank';a.rel='noopener';a.textContent='Admission Enquiry';document.body.appendChild(a)}
+ var tl=document.querySelector('.toplinks');if(tl&&!tl.querySelector('.srch')){var s=document.createElement('a');s.className='srch';s.href='search.html';s.textContent='Search';tl.appendChild(s)}
+})();

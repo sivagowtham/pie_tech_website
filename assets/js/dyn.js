@@ -2,7 +2,7 @@
    Each section reads a JSON file from /data. When a backend API is added later,
    point SRC at it (e.g. '/api/gallery') - the rendering below does not change. */
 (function(){
-var SRC={clubs:'data/clubs.json',gallery:'data/gallery.json',research:'data/research.json'};
+var SRC={clubs:'data/clubs.json',gallery:'data/gallery.json',research:'data/research.json',news:'data/news.json',search:'data/search-index.json'};
 var $=function(s,c){return(c||document).querySelector(s)},$$=function(s,c){return[].slice.call((c||document).querySelectorAll(s))};
 function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
 function get(k){return fetch(SRC[k],{cache:'no-cache'}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json()})}
@@ -82,5 +82,44 @@ if(rl)get('research').then(function(d){
  var h='';(d.sections||[]).forEach(function(s){if(!s.items||!s.items.length)return;
   h+='<h3>'+esc(s.title)+'</h3><div class="table-scroll"><table class="data-table"><thead><tr>'+s.columns.map(function(c){return'<th>'+esc(c)+'</th>'}).join('')+'</tr></thead><tbody>'+s.items.map(function(r){return'<tr>'+r.map(function(c){return'<td>'+esc(c)+'</td>'}).join('')+'</tr>'}).join('')+'</tbody></table></div>'});
  rl.innerHTML=h;
+}).catch(function(){});
+
+/* ---- news & events ---- */
+var MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+function dateBlock(iso){var p=(iso||'').split('-');if(p.length<3)return'<div class="nv-date"><b>&ndash;</b></div>';return'<div class="nv-date"><b>'+p[2]+'</b><span>'+MON[+p[1]-1]+'</span><em>'+p[0]+'</em></div>'}
+var nh=$('[data-dyn="news-home"]');
+if(nh)get('news').then(function(d){
+ var n=+nh.getAttribute('data-count')||6;
+ nh.innerHTML=d.news.slice(0,n).map(function(x){return'<a class="nv" href="news-events.html">'+dateBlock(x.date)+'<div><h3>'+esc(x.title)+'</h3>'+(x.summary?'<p>'+esc(x.summary.length>140?x.summary.slice(0,140)+'…':x.summary)+'</p>':'')+'</div></a>'}).join('');
+}).catch(function(){});
+var np=$('[data-dyn="news"]');
+if(np)get('news').then(function(d){
+ var all=d.news,years=[];all.forEach(function(x){var y=(x.date||'').slice(0,4);if(y&&years.indexOf(y)<0)years.push(y)});
+ var yr='All',q='';
+ np.innerHTML='<form class="search-form" onsubmit="return false"><input type="search" placeholder="Search news and events" aria-label="Search news and events"></form><div class="chips"></div><div class="nv-list"></div>';
+ var inp=$('input',np),chips=$('.chips',np),list=$('.nv-list',np);
+ function draw(){
+  chips.innerHTML=['All'].concat(years).map(function(y){return'<button class="chip'+(y===yr?' on':'')+'" data-y="'+y+'">'+y+'</button>'}).join('');
+  $$('.chip',chips).forEach(function(b){b.onclick=function(){yr=b.getAttribute('data-y');draw()}});
+  var l=all.filter(function(x){return(yr==='All'||(x.date||'').slice(0,4)===yr)&&(!q||(x.title+' '+x.summary).toLowerCase().indexOf(q)>=0)});
+  list.innerHTML=l.length?l.map(function(x){return'<article class="nv" style="cursor:default">'+dateBlock(x.date)+'<div><h3>'+esc(x.title)+'</h3>'+(x.summary?'<p>'+esc(x.summary)+'</p>':'')+(x.images&&x.images.length?'<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">'+x.images.map(function(i){return'<img src="'+esc(i)+'" alt="" loading="lazy" style="height:90px;width:auto;border-radius:8px">'}).join('')+'</div>':'')+'</div></article>'}).join(''):'<p>No matching news or events.</p>';
+ }
+ inp.oninput=function(){q=inp.value.trim().toLowerCase();draw()};draw();
+}).catch(function(){});
+
+/* ---- site search ---- */
+var sp=$('[data-dyn="search"]');
+if(sp)get('search').then(function(idx){
+ var q0=new URLSearchParams(location.search).get('q')||'';
+ sp.innerHTML='<form class="search-form" action="search.html"><input type="search" name="q" value="'+esc(q0)+'" placeholder="Search the PIE Tech website" aria-label="Search"><button class="btn" type="submit">Search</button></form><div class="results"></div>';
+ var out=$('.results',sp);
+ function run(q){
+  var terms=q.toLowerCase().split(/\s+/).filter(function(t){return t.length>1});
+  if(!terms.length){out.innerHTML='';return}
+  var scored=idx.map(function(r){var t=(r.t||'').toLowerCase(),x=(r.x||'').toLowerCase(),sc=0;terms.forEach(function(w){if(t.indexOf(w)>=0)sc+=5;var i=-1,c=0;while((i=x.indexOf(w,i+1))>=0&&c<5){c++;sc+=1}});return{r:r,s:sc}}).filter(function(o){return o.s>0}).sort(function(a,b){return b.s-a.s});
+  var seen={},rows=[];scored.forEach(function(o){var k=o.r.u+'|'+o.r.t;if(seen[k]||rows.length>=20)return;seen[k]=1;rows.push(o.r)});
+  out.innerHTML=rows.length?rows.map(function(r){var x=r.x||'',lo=x.toLowerCase(),i=Math.max(0,lo.indexOf(terms[0])-60),sn=esc(x.slice(i,i+220));terms.forEach(function(w){sn=sn.replace(new RegExp('('+w.replace(/[^a-z0-9]/g,'')+')','ig'),'<mark>$1</mark>')});return'<div class="sr"><a href="'+esc(r.u)+'">'+esc(r.t)+'</a><p>'+(i>0?'…':'')+sn+'…</p><small>'+esc(r.u)+'</small></div>'}).join(''):'<p>No results for <strong>'+esc(q)+'</strong>. Try different words.</p>';
+ }
+ run(q0);
 }).catch(function(){});
 })();

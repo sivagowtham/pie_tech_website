@@ -55,3 +55,6 @@ except FileNotFoundError:
 os.makedirs(f'{ROOT}/functions', exist_ok=True)
 json.dump(chunks, open(f'{ROOT}/functions/kb.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
 print(len(chunks), 'chunks', os.path.getsize(f'{ROOT}/functions/kb.json') // 1024, 'KB')
+# the site search page reads the same text
+os.makedirs(f'{ROOT}/data', exist_ok=True)
+json.dump(chunks, open(f'{ROOT}/data/search-index.json', 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
