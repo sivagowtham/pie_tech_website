@@ -189,7 +189,7 @@ def shell(title, body, home=False, desc=''):
 <a class="skip" href="#main">Skip to content</a>
 <div class="topbar"><div class="wrap">
  <div class="ticker" aria-label="Placement 2025"><div class="ticker-track"><span>{html.escape(TICKER)}</span><span aria-hidden="true">{html.escape(TICKER)}</span></div></div>
- <div class="toplinks"><a href="tel:+918438940273">Call Us (Admission) +91 8438940273, 9342224893</a><a href="https://forms.gle/SbP8aP95euqRNZfr5" target="_blank" rel="noopener">Admission</a><a href="http://www.pietech.edu.in/webmail" target="_blank" rel="noopener">Webmail</a></div>
+ <div class="toplinks"><a href="tel:+918438940273">Call Us (Admission) +91 8438940273, 9342224893</a><a href="https://forms.gle/SbP8aP95euqRNZfr5" target="_blank" rel="noopener">Admission</a><a href="http://pietech.edu.in/webmail" target="_blank" rel="noopener">Webmail</a></div>
 </div></div>
 <header class="site-header" id="top"><div class="wrap head-row">
  <a class="brand" href="index.html" aria-label="PIE Tech home"><img src="images/slider/logo.png" alt="Pollachi Institute of Engineering and Technology"></a>
@@ -206,9 +206,9 @@ def shell(title, body, home=False, desc=''):
 </body></html>'''
 
 FOOTER = '''<footer class="site-footer"><div class="wrap foot-grid">
-<div><h4>Quick Links</h4><ul><li><a href="college.html">About Us</a></li><li><a href="students-center.html">Students</a></li><li><a href="admissions.html">Admissions</a></li><li><a href="https://www.pietech.edu.in/doc/Help%20Desk.pdf" target="_blank" rel="noopener">Help Desk</a></li><li><a href="placementcell.html">Placement</a></li><li><a href="http://www.pietech.edu.in/webmail" target="_blank" rel="noopener">Web Mail</a></li></ul></div>
+<div><h4>Quick Links</h4><ul><li><a href="college.html">About Us</a></li><li><a href="students-center.html">Students</a></li><li><a href="admissions.html">Admissions</a></li><li><a href="https://pietech.edu.in/doc/Help%20Desk.pdf" target="_blank" rel="noopener">Help Desk</a></li><li><a href="placementcell.html">Placement</a></li><li><a href="http://pietech.edu.in/webmail" target="_blank" rel="noopener">Web Mail</a></li></ul></div>
 <div><h4>Information</h4><ul><li><a href="scholarships.html">Scholarships</a></li><li><a href="campus-life.html">Campus Life</a></li><li><a href="jobs.html">Jobs</a></li><li><a href="gallery.html">Photo Gallery</a></li><li><a href="emergency.html">Emergency Contact</a></li></ul></div>
-<div><h4>&nbsp;</h4><ul><li><a href="https://www.pietech.edu.in/doc/Acadimic%20calender%202021-2022odd.pdf" target="_blank" rel="noopener">Academic Calendar</a></li><li><a href="contact.html">Suggestion Box</a></li><li><a href="library.html">Library</a></li><li><a href="registration.html">Grievance Registration Portal</a></li><li><a href="internal-compliants.html">Internal Complaints Committee</a></li></ul></div>
+<div><h4>&nbsp;</h4><ul><li><a href="https://pietech.edu.in/doc/Acadimic%20calender%202021-2022odd.pdf" target="_blank" rel="noopener">Academic Calendar</a></li><li><a href="contact.html">Suggestion Box</a></li><li><a href="library.html">Library</a></li><li><a href="registration.html">Grievance Registration Portal</a></li><li><a href="internal-compliants.html">Internal Complaints Committee</a></li></ul></div>
 <div><h4>Contact Us</h4><p>Pollachi Institute of Engineering and Technology<br>PIE Tech Campus, 107/1B, Main Road,<br>Poosaripatti,<br>Pollachi-642 205<br>Coimbatore District.</p><p>Phone: <a href="tel:+918438940273">+91-8438940273</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="tel:+919342224893">+91-9342224893</a></p><p>Enquiry: <a href="mailto:dean@pietech.edu.in">dean@pietech.edu.in</a><br>Career: <a href="mailto:dean@pietech.edu.in">dean@pietech.edu.in</a><br>Principal: <a href="mailto:principal@pietech.edu.in">principal@pietech.edu.in</a></p></div>
 </div>
 <div class="foot-bottom"><div class="wrap">&copy; Pollachi Institute of Engineering and Technology. All rights reserved<span class="foot-icons"><a href="anti-ragging.html"><img src="images/slider/anti-ragging.jpg" alt="Anti-Ragging"></a><a href="https://www.facebook.com/pieTechn/" target="_blank" rel="noopener" aria-label="Facebook">f</a></span></div></div></footer>'''
@@ -346,11 +346,11 @@ def home_body():
   <div class="tabpane" id="t2"><p>PIE Tech is rapidly expanding. Please send your resumes to Principal</p><p>Principal<br>Email - <a href="mailto:principal@pietech.edu.in">principal@pietech.edu.in</a></p><p>Pollachi Institute Of Engineering and Technology<br>107/1B, Main Road,<br>Poosaripatti,<br>Pollachi-642205<br>Coimbatore District</p><p>Phone : 91-4259-266966<br>mobile : 91-96882 45777,<br>91-96884 45777</p></div></div>
  <aside class="panel dl reveal"><h3>Admissions</h3><ul>
   <li><a href="https://forms.gle/SbP8aP95euqRNZfr5" target="_blank" rel="noopener">Online Admission Form</a></li>
-  <li><a href="https://www.pietech.edu.in/doc/Broucher/Broucher.pdf" target="_blank" rel="noopener">Download Brouchers</a></li>
+  <li><a href="https://pietech.edu.in/doc/Broucher/Broucher.pdf" target="_blank" rel="noopener">Download Brouchers</a></li>
   <li><a href="what-we-offer.html">What we offer</a></li><li><a href="facilities.html">Facilities</a></li><li><a href="audit-statement.html">Audit Statement</a></li>
-  <li><a href="https://www.pietech.edu.in/doc/AICTE/AICTE2025.PDF" target="_blank" rel="noopener">AICTE Approved Order</a></li>
-  <li><a href="https://www.pietech.edu.in/doc/Mandatory%20Disclosure/Mandatory%20Disclosure%202026.pdf" target="_blank" rel="noopener">Mandatory Disclosure</a></li>
-  <li><a href="https://www.pietech.edu.in/doc/Grievances%20Redressal%20cell.pdf" target="_blank" rel="noopener">Grievances Redressal Cell</a></li></ul></aside>
+  <li><a href="https://pietech.edu.in/doc/AICTE/AICTE2025.PDF" target="_blank" rel="noopener">AICTE Approved Order</a></li>
+  <li><a href="https://pietech.edu.in/doc/Mandatory%20Disclosure/Mandatory%20Disclosure%202026.pdf" target="_blank" rel="noopener">Mandatory Disclosure</a></li>
+  <li><a href="https://pietech.edu.in/doc/Grievances%20Redressal%20cell.pdf" target="_blank" rel="noopener">Grievances Redressal Cell</a></li></ul></aside>
 </div></section>
 <section class="sec courses"><div class="wrap"><div class="head"><span class="kicker">Engineering</span><h2>Engineering Courses</h2></div><div class="course-grid">{courses}</div></div></section>
 <section class="sec gallery"><div class="wrap"><div class="head"><span class="kicker">Moments</span><h2>Our Gallery</h2></div><div class="g-grid">{gal}</div><p class="center"><a class="btn" href="gallery.html">View Photo Gallery</a></p></div></section>
