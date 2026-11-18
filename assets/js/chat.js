@@ -1,4 +1,6 @@
 (function(){
+/* The assistant runs on Cloudflare. On the Cloudflare site it is same-origin; on any other host it calls the Cloudflare address. Override with window.PIE_CHAT_URL. */
+var CHAT_URL=window.PIE_CHAT_URL||(/\.pages\.dev$/.test(location.hostname)?'/api/chat':'https://pietech-preview.pages.dev/api/chat');
 var T={
  en:{open:'Ask PIE Tech',title:'PIE Tech Assistant',sub:'Ask about courses, fees, admissions, hostel & placement',ph:'Type your question…',send:'Send',hello:'Hello! I am the PIE Tech assistant. How can I help you today?',note:'AI assistant. Answers come from our website - please confirm fees and dates with the admissions office: +91 8438940273.',src:'Source',err:'Sorry, I could not connect. Please call +91 8438940273.',
   chips:['What courses do you offer?','What are the tuition fees?','Scholarships for +2 students','Hostel and transport facilities','How can I apply?']},
@@ -23,7 +25,7 @@ function add(who,html){var m=el('div','m '+who,html);msgs.appendChild(m);msgs.sc
 function start(){msgs.innerHTML='';hist=[];add('bot',esc(T[lang].hello));render()}
 async function ask(q){q=(q||'').trim();if(!q||busy)return;busy=true;chips.innerHTML='';add('user',esc(q));hist.push({role:'user',content:q});inp.value='';
  var w=add('bot typing','<i></i><i></i><i></i>');
- try{var r=await fetch('/api/chat',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({messages:hist,lang:lang})});var d=await r.json();w.className='m bot';var h=fmt(d.reply||T[lang].err);
+ try{var r=await fetch(CHAT_URL,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({messages:hist,lang:lang})});var d=await r.json();w.className='m bot';var h=fmt(d.reply||T[lang].err);
   if(d.sources&&d.sources.length)h+='<div class="srcs">'+T[lang].src+': '+d.sources.map(function(s){return '<a href="'+esc(s.url)+'">'+esc(s.title)+'</a>'}).join(' · ')+'</div>';
   w.innerHTML=h;hist.push({role:'assistant',content:d.reply||''})}
  catch(e){w.className='m bot';w.innerHTML=esc(T[lang].err);hist.pop()}

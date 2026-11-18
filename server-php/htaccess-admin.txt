@@ -1,0 +1,6 @@
+# Save this file as  public_html/admin/.htaccess   (keeps the admin page out of search engines and caches)
+<IfModule mod_headers.c>
+  Header set X-Robots-Tag "noindex, nofollow"
+  Header set Cache-Control "no-store"
+  Header set X-Frame-Options "DENY"
+</IfModule>

@@ -1,0 +1,17 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Create config.php</title>
+<body style="font:16px/1.5 system-ui;max-width:720px;margin:30px auto;padding:0 16px">
+<h1>Create config.php</h1>
+<p>This page runs only in your browser and sends nothing anywhere. Click the button, copy the text into a new file called <b>config.php</b> inside the <b>pietech_private</b> folder, and keep the admin password somewhere safe.</p>
+<p><button id="go" style="font-size:16px;padding:10px 20px">Generate</button></p>
+<p><b>Admin password (user name: admin)</b></p><pre id="pw" style="background:#f3f3f3;padding:10px"></pre>
+<p><b>config.php</b></p><pre id="cfg" style="background:#f3f3f3;padding:10px;white-space:pre-wrap"></pre>
+<script>
+function rnd(n,alpha){var a=new Uint32Array(n);crypto.getRandomValues(a);return Array.from(a,function(x){return alpha[x%alpha.length]}).join('')}
+document.getElementById('go').onclick=function(){
+ var al='ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz23456789';
+ var pw=rnd(16,al),key=rnd(48,al+'0123456789');
+ document.getElementById('pw').textContent=pw;
+ document.getElementById('cfg').textContent="<?php\nreturn [\n    'ADMIN_PASSWORD' => '"+pw+"',\n    'SESSION_KEY'    => '"+key+"',\n];\n";
+};
+</script></body></html>

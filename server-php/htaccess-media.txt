@@ -1,0 +1,18 @@
+# Save this file as  public_html/media/.htaccess
+# Uploaded photos are served as plain files. Nothing in this folder may ever run as a script.
+<IfModule mod_php.c>
+  php_flag engine off
+</IfModule>
+<IfModule mod_php7.c>
+  php_flag engine off
+</IfModule>
+<IfModule mod_php8.c>
+  php_flag engine off
+</IfModule>
+RemoveHandler .php .phtml .php3 .php4 .php5 .php7 .php8
+RemoveType .php .phtml
+Options -ExecCGI -Indexes
+<FilesMatch "(?i)\.(php|phtml|phar|pl|py|cgi|sh)$">
+  Require all denied
+</FilesMatch>
+Header set X-Content-Type-Options "nosniff"

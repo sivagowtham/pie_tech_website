@@ -1,0 +1,5 @@
+# Save this file as  public_html/server/.htaccess
+# Only api.php may be reached from the web; nothing else in this folder.
+<FilesMatch "^(?!api\.php$).*$">
+  Require all denied
+</FilesMatch>

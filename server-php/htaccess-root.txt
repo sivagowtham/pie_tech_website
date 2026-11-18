@@ -1,0 +1,5 @@
+# Add these lines to the .htaccess in public_html (create the file if it does not exist).
+# They send the admin and data API calls to the PHP script; everything else is served as normal files.
+RewriteEngine On
+RewriteRule ^api/admin/(.+)$ server/api.php?route=admin/$1 [QSA,L]
+RewriteRule ^api/data/([a-z]+)$ server/api.php?route=data/$1 [QSA,L]
