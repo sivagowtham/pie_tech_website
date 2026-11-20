@@ -20,7 +20,7 @@ $$('.tab').forEach(function(t){t.addEventListener('click',function(){$$('.tab').
 /* reveal + counters */
 var io='IntersectionObserver'in window?new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;e.target.classList.add('in');$$('[data-count]',e.target).forEach(count);io.unobserve(e.target)})},{threshold:0,rootMargin:"0px 0px -5% 0px"}):null;
 $$('.reveal').forEach(function(r){io?io.observe(r):r.classList.add('in')});
-function count(el){if(el.dataset.plain!==undefined)return;var n=+el.dataset.count,s=performance.now();(function f(t){var p=Math.min((t-s)/1200,1);el.textContent=Math.round(n*p);if(p<1)requestAnimationFrame(f)})(s)}
+function count(el){if(el.dataset.plain!==undefined)return;var n=+el.dataset.count,s=performance.now();(function f(t){var p=Math.min(Math.max((t-s)/1200,0),1);el.textContent=Math.round(n*p);if(p<1)requestAnimationFrame(f)})(s)}
 /* to top */
 var tt=$('.to-top');window.addEventListener('scroll',function(){tt.classList.toggle('show',scrollY>600)},{passive:true});tt.onclick=function(){scrollTo({top:0,behavior:'smooth'})};
 /* lightbox */
