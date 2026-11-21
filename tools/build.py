@@ -145,7 +145,7 @@ menu = [
    M('Committees','#',[M('Anti Ragging Committee','Anti-Ragging Committee.php'),M('Internal Complaints Committee','Internal-Complaints-Committee.php'),M('Discipline and welfare Committee','Discipline-and-welfare-Committee.php'),M('Finance Committee','Finance-Committee.php'),M('Students Grievance Redressal committee','Grievance-Redressal.php'),M('Health and wellness committee','Health and Wellness Committee.php')]),
    M('Organizational Structure','Organogram.php')]),
  M('Academics', '#', [M('Programmes Offered','courses.php'),M('Anna University Regulations','syllabus.php'),M('Academic Calendar','doc/Academic Calendar 25-26.pdf'),M('Activity Calendar','doc/Academic Calendar 25-26.pdf'),M('Examinations','#'),M('Faculty Sheet','doc/Faculty Details.pdf')]),
- M('Admissions', 'admissions.php', [M('Programmes Offered','courses.php'),M('Eligibility','admissions.php'),M('Scholarships','scholarships.php'),M('Financial Aid','financial-aid.php'),M('Tuition Fees','tuition.php'),M('Campus Life','campus-life.php'),M('Online Admission Form','https://forms.gle/6W159TxYHu7MThev9')]),
+ M('Admissions', 'admissions.php', [M('Programmes Offered','courses.php'),M('Eligibility','admissions.php'),M('Scholarships','scholarships.php'),M('Financial Aid','financial-aid.php'),M('Tuition Fees','tuition.php'),M('Campus Life','campus-life.php'),M('Online Admission Form','https://forms.gle/LJPwttfFrHcfGGw49')]),
  M('Research', '#', [M('Research Policy and Promotions','research.php'),M('Research Members','Research Members.php'),M('IPR','IPR.php'),M('IIC','IIC.php')]),
  M('Departments', 'courses.php', [M('Artificial Intelligence & Data Science','pietech-ai.php'),M('B.Tech Information Technology','pietech-it.php'),M('Mechanical','pietech-mechanical.php'),M('Civil','pietech-civil.php'),M('Computer Science','pietech-cse.php'),M('Electronics & Communication','pietech-ece.php'),M('Electrical & Electronics','pietech-eee.php'),M('Science & Humanities','pietech-sci-human.php'),M('Exam Cell','exam-cell.php')]),
  M('Placement', '#', [M('Placement Cell','placementcell.php'),M('Recruiters Visited','placement-logo.php'),M('Placement Record','placement-record.php')]),
@@ -189,11 +189,11 @@ def shell(title, body, home=False, desc=''):
 <a class="skip" href="#main">Skip to content</a>
 <div class="topbar"><div class="wrap">
  <div class="ticker" aria-label="Placement 2025"><div class="ticker-track"><span>{html.escape(TICKER)}</span><span aria-hidden="true">{html.escape(TICKER)}</span></div></div>
- <div class="toplinks"><a href="tel:+918438940273">Call Us (Admission) +91 8438940273, 9342224893</a><a href="https://forms.gle/SbP8aP95euqRNZfr5" target="_blank" rel="noopener">Admission</a><a href="http://pietech.edu.in/webmail" target="_blank" rel="noopener">Webmail</a></div>
+ <div class="toplinks"><a href="tel:+918438940273">Call Us (Admission) +91 8438940273, 9342224893</a><a href="https://forms.gle/LJPwttfFrHcfGGw49" target="_blank" rel="noopener">Admission</a><a href="http://pietech.edu.in/webmail" target="_blank" rel="noopener">Webmail</a></div>
 </div></div>
 <header class="site-header" id="top"><div class="wrap head-row">
  <a class="brand" href="index.html" aria-label="PIE Tech home"><img src="images/slider/logo.png" alt="Pollachi Institute of Engineering and Technology"></a>
- <div class="head-badges"><a href="https://forms.gle/SbP8aP95euqRNZfr5" target="_blank" rel="noopener" class="btn btn-apply">Online Admission Form</a></div>
+ <div class="head-badges"><a href="https://forms.gle/LJPwttfFrHcfGGw49" target="_blank" rel="noopener" class="btn btn-apply">Online Admission Form</a></div>
  <button class="menu-btn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
 </div>
 <nav class="main-nav" aria-label="Main navigation"><div class="wrap"><ul class="menu"><li><a href="index.html">Home</a></li>{MENU_HTML}</ul></div></nav>
@@ -323,7 +323,7 @@ def home_body():
  <div class="hero-dots" role="tablist"></div><div class="hero-progress"><span></span></div>
 </section>
 <section class="quick"><div class="wrap quick-grid">
- <a href="https://forms.gle/SbP8aP95euqRNZfr5" target="_blank" rel="noopener"><b>Online Admission Form</b><span>Apply now</span></a>
+ <a href="https://forms.gle/LJPwttfFrHcfGGw49" target="_blank" rel="noopener"><b>Online Admission Form</b><span>Apply now</span></a>
  <a href="courses.html"><b>Engineering Courses</b><span>Programmes offered</span></a>
  <a href="placementcell.html"><b>Placement</b><span>Placement Cell &amp; records</span></a>
  <a href="scholarships.html"><b>Scholarships</b><span>For Diploma &amp; +2 students</span></a>
@@ -345,7 +345,7 @@ def home_body():
   <div class="tabpane active" id="t1"><ul class="newslist">{news}</ul></div>
   <div class="tabpane" id="t2"><p>PIE Tech is rapidly expanding. Please send your resumes to Principal</p><p>Principal<br>Email - <a href="mailto:principal@pietech.edu.in">principal@pietech.edu.in</a></p><p>Pollachi Institute Of Engineering and Technology<br>107/1B, Main Road,<br>Poosaripatti,<br>Pollachi-642205<br>Coimbatore District</p><p>Phone : 91-4259-266966<br>mobile : 91-96882 45777,<br>91-96884 45777</p></div></div>
  <aside class="panel dl reveal"><h3>Admissions</h3><ul>
-  <li><a href="https://forms.gle/SbP8aP95euqRNZfr5" target="_blank" rel="noopener">Online Admission Form</a></li>
+  <li><a href="https://forms.gle/LJPwttfFrHcfGGw49" target="_blank" rel="noopener">Online Admission Form</a></li>
   <li><a href="https://pietech.edu.in/doc/Broucher/Broucher.pdf" target="_blank" rel="noopener">Download Brouchers</a></li>
   <li><a href="what-we-offer.html">What we offer</a></li><li><a href="facilities.html">Facilities</a></li><li><a href="audit-statement.html">Audit Statement</a></li>
   <li><a href="https://pietech.edu.in/doc/AICTE/AICTE2025.PDF" target="_blank" rel="noopener">AICTE Approved Order</a></li>

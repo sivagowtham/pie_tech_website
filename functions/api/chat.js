@@ -10,7 +10,7 @@ const FACTS = `COLLEGE: Pollachi Institute of Engineering and Technology (PIE Te
 ADDRESS: PIE Tech Campus, 107/1B, Main Road, Poosaripatti, Pollachi-642 205, Coimbatore District.
 ADMISSION PHONE: +91 8438940273, +91 9342224893. Office phone: 91-4259-266966. Mobile: 91-96882 45777, 91-96884 45777.
 EMAIL: Enquiry / Career: dean@pietech.edu.in. Principal: principal@pietech.edu.in.
-ONLINE ADMISSION FORM: https://forms.gle/SbP8aP95euqRNZfr5
+ONLINE ADMISSION FORM: https://forms.gle/LJPwttfFrHcfGGw49
 ENGINEERING COURSES: B.Tech Artificial Intelligence and Data Science; B.Tech Information Technology; B.E Civil Engineering; B.E Computer Science and Engineering; B.E Electrical and Electronics Engineering; B.E Electronics and Communication Engineering; B.E Mechanical Engineering. Also a Science and Humanities Department.
 TUITION FEES (follow Anna University guidelines): Government Quota Rs.50,000.00; Management Quota Rs.70,000.00; Hostel fee: maintenance charges applicable.
 PLACEMENT 2025: TCS-5 | Wipro-3 | Infosys-8 | KGiSL-2 | Tech Mahindra-2 | Zoho-1 | Deloitte-1 | Steel Strip Wheels India-6 | Natesan-1 | PSA AVTEC-1 | LGB-1 | ZF Rane-6 | Danfoss-3 | Sutherland-2 | Vintroix-1 | KYB-30 | Quality Kiosk-1 | HRH Next-41 | Skyraan-4 | Foxconn-9 | IVA Technos-11
